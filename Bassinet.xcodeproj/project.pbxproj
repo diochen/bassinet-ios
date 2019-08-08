@@ -15,6 +15,7 @@
 		A56DD49422FAD325005AC648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56DD49222FAD325005AC648 /* LaunchScreen.storyboard */; };
 		A56DD49F22FAD329005AC648 /* BassinetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD49E22FAD329005AC648 /* BassinetTests.swift */; };
 		A56DD4AA22FAD329005AC648 /* BassinetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD4A922FAD329005AC648 /* BassinetUITests.swift */; };
+		A56DD4BA22FC28C4005AC648 /* CustomToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56DD4B922FC28C4005AC648 /* CustomToolbar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A56DD4A522FAD329005AC648 /* BassinetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BassinetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56DD4A922FAD329005AC648 /* BassinetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BassinetUITests.swift; sourceTree = "<group>"; };
 		A56DD4AB22FAD329005AC648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56DD4B922FC28C4005AC648 /* CustomToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolbar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		A56DD48522FAD2FF005AC648 /* Bassinet */ = {
 			isa = PBXGroup;
 			children = (
+				A56DD4B722FC259A005AC648 /* Common */,
 				A56DD48622FAD2FF005AC648 /* AppDelegate.swift */,
 				A56DD48822FAD2FF005AC648 /* ViewController.swift */,
 				A56DD48A22FAD2FF005AC648 /* Main.storyboard */,
@@ -126,6 +129,22 @@
 				A56DD4AB22FAD329005AC648 /* Info.plist */,
 			);
 			path = BassinetUITests;
+			sourceTree = "<group>";
+		};
+		A56DD4B722FC259A005AC648 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A56DD4B822FC2848005AC648 /* view */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A56DD4B822FC2848005AC648 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A56DD4B922FC28C4005AC648 /* CustomToolbar.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56DD4BA22FC28C4005AC648 /* CustomToolbar.xib in Resources */,
 				A56DD49422FAD325005AC648 /* LaunchScreen.storyboard in Resources */,
 				A56DD49122FAD325005AC648 /* Assets.xcassets in Resources */,
 				A56DD48C22FAD2FF005AC648 /* Main.storyboard in Resources */,
