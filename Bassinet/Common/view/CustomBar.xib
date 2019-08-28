@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomBar" customModule="Bassinet" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="neX-NO-cod" id="ZKl-QY-Rvj"/>
+                <outlet property="homeBtn" destination="g4e-at-oes" id="dQt-cO-cdj"/>
+                <outlet property="memberBtn" destination="rNE-PO-MOI" id="Z1T-55-qy1"/>
+                <outlet property="parkingBtn" destination="B78-Ud-3Q7" id="VFi-lm-NWp"/>
+                <outlet property="payBtn" destination="T1n-aS-e63" id="81c-Oq-AdW"/>
+                <outlet property="redeemBtn" destination="IW0-bb-54O" id="4vz-l1-Q3A"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jqL-ZY-zGy"/>
             </connections>
         </placeholder>
@@ -20,82 +26,150 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neX-NO-cod">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neX-NO-cod">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="7du-oc-d52" customClass="bar_tab_line_bg">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="7du-oc-d52">
                             <rect key="frame" x="0.0" y="0.0" width="14" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-PO-MOI" userLabel="Member btn">
-                            <rect key="frame" x="14" y="0.0" width="48" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" backgroundImage="btn_tab_user_disable"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-PO-MOI" userLabel="Member btn">
+                            <rect key="frame" x="14" y="0.0" width="49" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="會員中心" backgroundImage="btn_tab_user_disable">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_tab_user_active">
+                                <color key="titleColor" red="1" green="0.252034354529173" blue="0.20696211558636379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickMemberBtn:" destination="-1" eventType="touchUpInside" id="ojP-YQ-gNg"/>
+                            </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ivI-g1-eGP" customClass="bar_tab_line_bg">
-                            <rect key="frame" x="62" y="0.0" width="28" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ivI-g1-eGP">
+                            <rect key="frame" x="63" y="0.0" width="22" height="68"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW0-bb-54O" userLabel="兌換贈獎">
-                            <rect key="frame" x="90" y="0.0" width="48" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="btn_tab_exchange_disable"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW0-bb-54O" userLabel="兌換贈獎">
+                            <rect key="frame" x="85" y="0.0" width="48" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="贈獎活動" backgroundImage="btn_tab_exchange_disable">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_tab_exchange_active">
+                                <color key="titleColor" red="1" green="0.24830891370298191" blue="0.19713421209348758" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickRedeemBtn:" destination="-1" eventType="touchUpInside" id="xlZ-3g-8DD"/>
+                            </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="nL9-aH-tAZ" customClass="bar_tab_line_bg">
-                            <rect key="frame" x="138" y="0.0" width="27" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="nL9-aH-tAZ">
+                            <rect key="frame" x="133" y="0.0" width="27" height="68"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="hOC-sm-E88" customClass="bar_tab_line_bg">
-                            <rect key="frame" x="213" y="0.0" width="27" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B78-Ud-3Q7" userLabel="停車服務">
-                            <rect key="frame" x="240" y="0.0" width="48" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="btn_tab_parking_disable"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4e-at-oes" userLabel="Home">
+                            <rect key="frame" x="160" y="0.0" width="48" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="首頁" backgroundImage="btn_tab_index_disable">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_tab_index_active">
+                                <color key="titleColor" red="1" green="0.28721746283886096" blue="0.20366308247025056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="clickHomeBtn:" destination="-1" eventType="touchUpInside" id="IOf-Ts-hHK"/>
+                            </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-pV-xJ8" customClass="bar_tab_line_bg">
-                            <rect key="frame" x="288" y="0.0" width="27" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="hOC-sm-E88">
+                            <rect key="frame" x="208" y="0.0" width="27" height="68"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-aS-e63" userLabel="支付">
-                            <rect key="frame" x="315" y="0.0" width="48" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="btn_tab_pay_disable"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B78-Ud-3Q7" userLabel="停車服務">
+                            <rect key="frame" x="238.5" y="0.0" width="45" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="停車服務" backgroundImage="btn_tab_parking_disable">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_tab_parking_active">
+                                <color key="titleColor" red="0.87429161269430056" green="0.26615405438430761" blue="0.24327833680758448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="clickParkingBtn:" destination="-1" eventType="touchUpInside" id="p73-od-uU2"/>
+                            </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-Ct-yBW" customClass="bar_tab_line_bg">
-                            <rect key="frame" x="363" y="0.0" width="13" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-pV-xJ8">
+                            <rect key="frame" x="283.5" y="0.0" width="21.5" height="68"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4e-at-oes" userLabel="Home">
-                            <rect key="frame" x="165" y="0.0" width="48" height="68"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="btn_tab_index_disable"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-aS-e63" userLabel="支付">
+                            <rect key="frame" x="305" y="0.0" width="48" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="支付" backgroundImage="btn_tab_pay_disable">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" backgroundImage="btn_tab_pay_active">
+                                <color key="titleColor" red="0.87429161269430056" green="0.27581149166663144" blue="0.25074592072362356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="clickPayBtn:" destination="-1" eventType="touchUpInside" id="nza-nn-a1X"/>
+                            </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bar_tab_line_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-Ct-yBW">
+                            <rect key="frame" x="353" y="0.0" width="23" height="68"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7Rh-pV-xJ8" firstAttribute="leading" secondItem="B78-Ud-3Q7" secondAttribute="trailing" id="0th-yd-cm7"/>
+                        <constraint firstItem="ivI-g1-eGP" firstAttribute="leading" secondItem="rNE-PO-MOI" secondAttribute="trailing" id="8ek-0w-dM3"/>
+                        <constraint firstItem="rNE-PO-MOI" firstAttribute="leading" secondItem="7du-oc-d52" secondAttribute="trailing" id="FTb-e6-nIA"/>
+                        <constraint firstItem="ndW-Ct-yBW" firstAttribute="leading" secondItem="T1n-aS-e63" secondAttribute="trailing" id="GF4-Im-as2"/>
+                        <constraint firstItem="7du-oc-d52" firstAttribute="leading" secondItem="nhW-jk-VIZ" secondAttribute="leading" id="H1q-Ca-6zm"/>
+                        <constraint firstItem="IW0-bb-54O" firstAttribute="leading" secondItem="ivI-g1-eGP" secondAttribute="trailing" id="HIz-Nw-wY2"/>
+                        <constraint firstItem="g4e-at-oes" firstAttribute="centerX" secondItem="nhW-jk-VIZ" secondAttribute="centerX" id="MMu-rX-810"/>
+                        <constraint firstItem="g4e-at-oes" firstAttribute="leading" secondItem="IW0-bb-54O" secondAttribute="trailing" constant="27" id="cK6-qZ-kv5"/>
+                        <constraint firstItem="nL9-aH-tAZ" firstAttribute="leading" secondItem="IW0-bb-54O" secondAttribute="trailing" id="cUN-88-hJY"/>
+                        <constraint firstItem="g4e-at-oes" firstAttribute="leading" secondItem="rNE-PO-MOI" secondAttribute="trailing" constant="96.5" id="ekw-Cm-gLP"/>
+                        <constraint firstItem="T1n-aS-e63" firstAttribute="leading" secondItem="7Rh-pV-xJ8" secondAttribute="trailing" id="fMi-Y4-zlF"/>
+                        <constraint firstItem="B78-Ud-3Q7" firstAttribute="leading" secondItem="g4e-at-oes" secondAttribute="trailing" constant="27" id="guA-QI-npl"/>
+                        <constraint firstItem="T1n-aS-e63" firstAttribute="leading" secondItem="g4e-at-oes" secondAttribute="trailing" constant="93.5" id="h5N-sb-KBx"/>
+                        <constraint firstItem="g4e-at-oes" firstAttribute="leading" secondItem="nL9-aH-tAZ" secondAttribute="trailing" id="haU-8h-vnE"/>
+                        <constraint firstItem="ndW-Ct-yBW" firstAttribute="trailing" secondItem="nhW-jk-VIZ" secondAttribute="trailing" constant="1" id="mjv-fM-QwJ"/>
+                        <constraint firstItem="g4e-at-oes" firstAttribute="width" secondItem="neX-NO-cod" secondAttribute="width" multiplier="0.128" id="pcn-Kg-0eA"/>
+                        <constraint firstItem="hOC-sm-E88" firstAttribute="leading" secondItem="g4e-at-oes" secondAttribute="trailing" id="rce-zw-9ci"/>
+                        <constraint firstItem="B78-Ud-3Q7" firstAttribute="leading" secondItem="hOC-sm-E88" secondAttribute="trailing" id="xRg-zq-Icq"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="nhW-jk-VIZ"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="neX-NO-cod" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7Er-JW-efS"/>
-                <constraint firstItem="neX-NO-cod" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VbB-3N-oFB"/>
-                <constraint firstAttribute="bottom" secondItem="neX-NO-cod" secondAttribute="bottom" id="eba-Db-b61"/>
-                <constraint firstItem="neX-NO-cod" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vVo-9a-eEG"/>
+                <constraint firstItem="neX-NO-cod" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="218-3n-faA"/>
+                <constraint firstItem="neX-NO-cod" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="L6X-xi-pzl"/>
+                <constraint firstItem="neX-NO-cod" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="OAW-oV-t75"/>
+                <constraint firstItem="neX-NO-cod" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dIa-zY-F78"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52.898550724637687" y="71.651785714285708"/>
         </view>
     </objects>
     <resources>
         <image name="bar_tab_line_bg" width="20" height="68"/>
+        <image name="btn_tab_exchange_active" width="48" height="68"/>
         <image name="btn_tab_exchange_disable" width="48" height="68"/>
+        <image name="btn_tab_index_active" width="48" height="68"/>
         <image name="btn_tab_index_disable" width="48" height="68"/>
+        <image name="btn_tab_parking_active" width="48" height="69"/>
         <image name="btn_tab_parking_disable" width="48" height="68"/>
+        <image name="btn_tab_pay_active" width="48" height="69"/>
         <image name="btn_tab_pay_disable" width="48" height="68"/>
+        <image name="btn_tab_user_active" width="48" height="69"/>
         <image name="btn_tab_user_disable" width="48" height="68"/>
     </resources>
 </document>

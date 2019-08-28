@@ -13,7 +13,13 @@ class CustomBar: UIView {
     
     
     @IBOutlet var view: UIView!
+    @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var memberBtn: UIButton!
+    @IBOutlet weak var redeemBtn: UIButton!
+    @IBOutlet weak var homeBtn: UIButton!
+    @IBOutlet weak var parkingBtn: UIButton!
+    @IBOutlet weak var payBtn: UIButton!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -30,9 +36,51 @@ class CustomBar: UIView {
         Bundle.main.loadNibNamed(CONTENT_XIB_NAME, owner: self, options: nil)
         self.addSubview(view)
         view.frame = self.bounds
-        print("===== custom toolbar init")
-        print(view.frame)
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        contentView.frame = view.frame
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        print(contentView.frame)
+        
+    }
+
+    @IBAction func clickMemberBtn(_ sender: UIButton) {
+        if sender.isSelected { return }
+        for case let button as UIButton in self.contentView.subviews {
+            button.isSelected = false
+        }
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func clickRedeemBtn(_ sender: UIButton) {
+        if sender.isSelected { return }
+        for case let button as UIButton in self.contentView.subviews {
+            button.isSelected = false
+        }
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func clickHomeBtn(_ sender: UIButton) {
+        if sender.isSelected { return }
+        for case let button as UIButton in self.contentView.subviews {
+            button.isSelected = false
+        }
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func clickParkingBtn(_ sender: UIButton) {
+        if sender.isSelected { return }
+        for case let button as UIButton in self.contentView.subviews {
+            button.isSelected = false
+        }
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func clickPayBtn(_ sender: UIButton) {
+        if sender.isSelected { return }
+        for case let button as UIButton in self.contentView.subviews {
+            button.isSelected = false
+        }
+        sender.isSelected.toggle()
     }
 }

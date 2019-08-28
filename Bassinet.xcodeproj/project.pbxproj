@@ -15,10 +15,6 @@
 		A56DD49422FAD325005AC648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56DD49222FAD325005AC648 /* LaunchScreen.storyboard */; };
 		A56DD49F22FAD329005AC648 /* BassinetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD49E22FAD329005AC648 /* BassinetTests.swift */; };
 		A56DD4AA22FAD329005AC648 /* BassinetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD4A922FAD329005AC648 /* BassinetUITests.swift */; };
-		A56DD4BB23015954005AC648 /* CustomToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56DD4BD23015954005AC648 /* CustomToolbar.xib */; };
-		A5EA0482230A991A0097ED75 /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA0481230A991A0097ED75 /* CustomToolbar.swift */; };
-		A5EA0484230BCA390097ED75 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EA0483230BCA390097ED75 /* CustomView.xib */; };
-		A5EA0486230BCB160097ED75 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA0485230BCB160097ED75 /* CustomView.swift */; };
 		A5EA0488230CEDE20097ED75 /* CustomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EA0487230CEDE20097ED75 /* CustomBar.xib */; };
 		A5EA048A230CF06F0097ED75 /* CustomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA0489230CF06F0097ED75 /* CustomBar.swift */; };
 /* End PBXBuildFile section */
@@ -55,14 +51,8 @@
 		A56DD4A522FAD329005AC648 /* BassinetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BassinetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56DD4A922FAD329005AC648 /* BassinetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BassinetUITests.swift; sourceTree = "<group>"; };
 		A56DD4AB22FAD329005AC648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A56DD4BC23015954005AC648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CustomToolbar.xib; sourceTree = "<group>"; };
-		A56DD4BF23015978005AC648 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CustomToolbar.strings; sourceTree = "<group>"; };
-		A56DD4C023015E4F005AC648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CustomToolbar.strings"; sourceTree = "<group>"; };
 		A56DD4C123015E50005AC648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		A56DD4C223015E51005AC648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		A5EA0481230A991A0097ED75 /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
-		A5EA0483230BCA390097ED75 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
-		A5EA0485230BCB160097ED75 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		A5EA0487230CEDE20097ED75 /* CustomBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBar.xib; sourceTree = "<group>"; };
 		A5EA0489230CF06F0097ED75 /* CustomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomBar.swift; path = Bassinet/Common/CustomBar.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -149,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				A56DD4B822FC2848005AC648 /* view */,
-				A5EA0481230A991A0097ED75 /* CustomToolbar.swift */,
-				A5EA0485230BCB160097ED75 /* CustomView.swift */,
 				A5EA0489230CF06F0097ED75 /* CustomBar.swift */,
 			);
 			path = Common;
@@ -159,8 +147,6 @@
 		A56DD4B822FC2848005AC648 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A56DD4BD23015954005AC648 /* CustomToolbar.xib */,
-				A5EA0483230BCA390097ED75 /* CustomView.xib */,
 				A5EA0487230CEDE20097ED75 /* CustomBar.xib */,
 			);
 			path = view;
@@ -270,8 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A56DD4BB23015954005AC648 /* CustomToolbar.xib in Resources */,
-				A5EA0484230BCA390097ED75 /* CustomView.xib in Resources */,
 				A5EA0488230CEDE20097ED75 /* CustomBar.xib in Resources */,
 				A56DD49422FAD325005AC648 /* LaunchScreen.storyboard in Resources */,
 				A56DD49122FAD325005AC648 /* Assets.xcassets in Resources */,
@@ -301,8 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5EA048A230CF06F0097ED75 /* CustomBar.swift in Sources */,
-				A5EA0486230BCB160097ED75 /* CustomView.swift in Sources */,
-				A5EA0482230A991A0097ED75 /* CustomToolbar.swift in Sources */,
 				A56DD48922FAD2FF005AC648 /* ViewController.swift in Sources */,
 				A56DD48722FAD2FF005AC648 /* AppDelegate.swift in Sources */,
 				A56DD48F22FAD2FF005AC648 /* Bassinet.xcdatamodeld in Sources */,
@@ -357,16 +339,6 @@
 				A56DD4C223015E51005AC648 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A56DD4BD23015954005AC648 /* CustomToolbar.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A56DD4BC23015954005AC648 /* Base */,
-				A56DD4BF23015978005AC648 /* en */,
-				A56DD4C023015E4F005AC648 /* zh-Hant */,
-			);
-			name = CustomToolbar.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
