@@ -50,6 +50,10 @@ class CustomBar: UIView {
             button.isSelected = false
         }
         sender.isSelected.toggle()
+ 
+        // TODO(Dio)
+        let branchRepo = BranchRepo()
+        branchRepo.getBranchList()
     }
     
     @IBAction func clickRedeemBtn(_ sender: UIButton) {
