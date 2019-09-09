@@ -22,6 +22,8 @@
 		A56DD49422FAD325005AC648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56DD49222FAD325005AC648 /* LaunchScreen.storyboard */; };
 		A56DD49F22FAD329005AC648 /* BassinetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD49E22FAD329005AC648 /* BassinetTests.swift */; };
 		A56DD4AA22FAD329005AC648 /* BassinetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DD4A922FAD329005AC648 /* BassinetUITests.swift */; };
+		A599C124232649CA00B9A541 /* ApiNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599C123232649CA00B9A541 /* ApiNetworkError.swift */; };
+		A599C1262326598600B9A541 /* BranchListReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599C1252326598600B9A541 /* BranchListReq.swift */; };
 		A5EA0488230CEDE20097ED75 /* CustomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EA0487230CEDE20097ED75 /* CustomBar.xib */; };
 		A5EA048A230CF06F0097ED75 /* CustomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA0489230CF06F0097ED75 /* CustomBar.swift */; };
 		C0F6419FBD15BD22D5866DDF /* Pods_BassinetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07B5AE773C887BE13B23DF /* Pods_BassinetTests.framework */; };
@@ -77,6 +79,8 @@
 		A56DD4AB22FAD329005AC648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56DD4C123015E50005AC648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		A56DD4C223015E51005AC648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A599C123232649CA00B9A541 /* ApiNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiNetworkError.swift; path = Bassinet/API/ApiNetworkError.swift; sourceTree = SOURCE_ROOT; };
+		A599C1252326598600B9A541 /* BranchListReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchListReq.swift; path = Bassinet/API/Request/BranchListReq.swift; sourceTree = SOURCE_ROOT; };
 		A5EA0487230CEDE20097ED75 /* CustomBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBar.xib; sourceTree = "<group>"; };
 		A5EA0489230CF06F0097ED75 /* CustomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomBar.swift; path = Bassinet/Common/CustomBar.swift; sourceTree = SOURCE_ROOT; };
 		D02197EFF8B3C2DF71F2994A /* Pods-BassinetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BassinetTests.debug.xcconfig"; path = "Target Support Files/Pods-BassinetTests/Pods-BassinetTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				003B1E9523253746008FEF15 /* Request */,
 				003B1E9823256571008FEF15 /* ApiManager.swift */,
+				A599C123232649CA00B9A541 /* ApiNetworkError.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				003B1E96232537ED008FEF15 /* BaseReq.swift */,
+				A599C1252326598600B9A541 /* BranchListReq.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -481,11 +487,13 @@
 				003B1E9223252975008FEF15 /* DebugTools.swift in Sources */,
 				003B1E892324D077008FEF15 /* ErrorResponse.swift in Sources */,
 				A5EA048A230CF06F0097ED75 /* CustomBar.swift in Sources */,
+				A599C1262326598600B9A541 /* BranchListReq.swift in Sources */,
 				003B1E94232533D5008FEF15 /* BranchRepo.swift in Sources */,
 				003B1E9923256571008FEF15 /* ApiManager.swift in Sources */,
 				A56DD48922FAD2FF005AC648 /* ViewController.swift in Sources */,
 				A56DD48722FAD2FF005AC648 /* AppDelegate.swift in Sources */,
 				A56DD48F22FAD2FF005AC648 /* Bassinet.xcdatamodeld in Sources */,
+				A599C124232649CA00B9A541 /* ApiNetworkError.swift in Sources */,
 				003B1E8D2325210A008FEF15 /* Branch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

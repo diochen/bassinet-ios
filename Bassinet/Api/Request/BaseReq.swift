@@ -9,12 +9,16 @@
 import Foundation
 
 class BaseReq{
-    let url: String? = nil
+    private let uri: String = ""
     
     init() {}
 
     public func getURL() -> String {
-        return "https://sogoapptest.sogo.com.tw/com/webservice/branchDataList"
+        return "https://sogoapptest.sogo.com.tw/com/webservice/" + getAPIPath()
+    }
+    
+    public func getAPIPath() -> String {
+        return uri;
     }
     
     public func getBody() -> String {

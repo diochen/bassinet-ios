@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 
-typealias Handler = (Error?, String) -> Void
+typealias Handler = (Error?, String?) -> Void
 
 class ApiManager: NSObject {
     
@@ -27,4 +27,24 @@ class ApiManager: NSObject {
     }
     
     
+    func call<T>(request:BaseReq, handler: @escaping (Swift.Result<T, ApiNetworkError>) -> Void) where T: Codable {
+        debugPrint(request.getURL());
+        AF.request(request.getURL()).response { response in
+            
+            do {
+                guard let jsonData = response.data else {
+                    throw ApiNetworkError(title: "Error", body: "No data")
+                }
+                let result = try JSONDecoder().decode(T.self, from: jsonData)
+                handler(.success(result))
+            } catch {
+                if let error = error as? ApiNetworkError {
+                    return handler(.failure(error))
+                }
+                
+                //handler(.failure(self.parseApiError(data: response.data)))
+                handler(.failure(ApiNetworkError(title: "Error", body: "unknown")))
+            }
+        }
+    }
 }

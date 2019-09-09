@@ -10,8 +10,20 @@ import Foundation
 
 class BranchRepo: NSObject {
     public func getBranchList(){
-        ApiManager.shared.get(request: BaseReq()) {(error, result) in
-            
+     
+        ApiManager.shared.call(request: BranchListReq()) { (res: Swift.Result<GenericResponseList<Branch>, ApiNetworkError>) in
+            switch res {
+            case .success(let data):
+                debugPrint(data)
+                //self.user.value = user
+                break
+            case .failure(let message):
+                //self.alertMessage.value = message
+                debugPrint("==============")
+                debugPrint(message)
+                debugPrint("==============")
+                break
+            }
         }
     }
 }
